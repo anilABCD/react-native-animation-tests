@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Animated, StyleSheet, SafeAreaView, ScrollView, TouchableWithoutFeedback, View } from "react-native";
-export default function App() {
+export default function Opacity() {
   const [headerShown, setHeaderShown] = useState(false);
 
   const [animatedValue, setAnimatedValue] = useState(new Animated.Value(1));
