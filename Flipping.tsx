@@ -27,8 +27,8 @@ export default function Flipping() {
   const animatedStyle = {
     transform: [
       {
-        // scale: animatedValue, // x and y
-        scaleX: animatedValue,
+        // scaleX: animatedValue,
+        scaleY: animatedValue,
       },
     ],
   };

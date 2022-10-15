@@ -6,7 +6,7 @@ import Translate from "./Translate";
 export default function App() {
   return (
     <SafeAreaView>
-      <Flipping />
+      <Scale />
     </SafeAreaView>
   );
 }

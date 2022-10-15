@@ -27,9 +27,17 @@ export default function Scale() {
   const animatedStyle = {
     transform: [
       {
+        // only one value in transform ...
         // scale: animatedValue, // x and y
-        scale: animatedValue,
+        scaleX: animatedValue,
+        // scaleY: animatedValue,
       },
+      // {
+      //   // extra value can be added here ...
+      //   // scale: animatedValue, // x and y
+      //   // scaleY: animatedValue,
+      //   // scaleY: animatedValue,
+      // },
     ],
   };
 
