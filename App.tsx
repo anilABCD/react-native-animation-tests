@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Animated, StyleSheet, SafeAreaView, ScrollView, TouchableWithoutFeedback, View } from "react-native";
+
 import Opacity from "./AnimationsILearnedAndWrote/Opacity";
 import Translate from "./AnimationsILearnedAndWrote/Translate";
 import Flipping from "./AnimationsILearnedAndWrote/Flipping";

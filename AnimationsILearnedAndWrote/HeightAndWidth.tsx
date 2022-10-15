@@ -3,7 +3,7 @@ import { Animated, StyleSheet, SafeAreaView, Text, ScrollView, TouchableWithoutF
 export default function HeightAndWidth() {
   const [headerShown, setHeaderShown] = useState(false);
 
-  const [animatedValue, setAnimatedValue] = useState(new Animated.Value(1));
+  const [animatedValue, setAnimatedValue] = useState(new Animated.Value(100));
   const [start, setStart] = useState(true);
 
   const startAnimation = () => {
@@ -11,7 +11,7 @@ export default function HeightAndWidth() {
       setStart(false);
 
       Animated.timing(animatedValue, {
-        toValue: 2,
+        toValue: 350,
         // for flipping use eg -1 for 1x size wit flip
         // to scale increase the number to 1xtimes 1 mening 1x of scale .
         // 1x meaing same size or its original size.
@@ -25,20 +25,8 @@ export default function HeightAndWidth() {
   };
 
   const animatedStyle = {
-    transform: [
-      {
-        // only one value in transform ...
-        // scale: animatedValue, // x and y
-        scaleX: animatedValue,
-        // scaleY: animatedValue,
-      },
-      // {
-      //   // extra value can be added here ...
-      //   // scale: animatedValue, // x and y
-      //   // scaleY: animatedValue,
-      //   // scaleY: animatedValue,
-      // },
-    ],
+    // height: animatedValue,
+    width: animatedValue,
   };
 
   return (
