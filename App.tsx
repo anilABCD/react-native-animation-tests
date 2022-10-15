@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Animated, StyleSheet, SafeAreaView, ScrollView, TouchableWithoutFeedback, View } from "react-native";
-import Flipping from "./Flipping";
-import Scale from "./Scale";
-import Translate from "./Translate";
+import Opacity from "./AnimationsILearnedAndWrote/Opacity";
+import Translate from "./AnimationsILearnedAndWrote/Translate";
+import Flipping from "./AnimationsILearnedAndWrote/Flipping";
+import Scale from "./AnimationsILearnedAndWrote/Scale";
+import HeightAndWidth from "./AnimationsILearnedAndWrote/HeightAndWidth";
+
 export default function App() {
   return (
     <SafeAreaView>
-      <Scale />
+      <HeightAndWidth />
     </SafeAreaView>
   );
 }
