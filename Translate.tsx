@@ -1,28 +1,35 @@
 import React, { useState } from "react";
 import { Animated, StyleSheet, SafeAreaView, ScrollView, TouchableWithoutFeedback, View } from "react-native";
-export default function Opacity() {
+export default function Translate() {
   const [headerShown, setHeaderShown] = useState(false);
 
-  const [animatedValue, setAnimatedValue] = useState(new Animated.Value(1));
+  const [animatedValue, setAnimatedValue] = useState(new Animated.Value(0));
   const [opacity, setOpacity] = useState(1);
 
   const startAnimation = () => {
     Animated.timing(animatedValue, {
-      toValue: 0,
-      duration: 350,
+      toValue: 150,
+      duration: 1000,
       useNativeDriver: false,
     }).start(() => {
       setOpacity(0);
       Animated.timing(animatedValue, {
-        toValue: 1,
-        duration: 350,
+        toValue: 0,
+        duration: 1000,
         useNativeDriver: false,
       }).start();
     });
   };
 
   const animatedStyle = {
-    opacity: animatedValue,
+    transform: [
+      {
+        translateY: animatedValue,
+      },
+      {
+        translateX: animatedValue,
+      },
+    ],
   };
 
   return (
