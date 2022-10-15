@@ -8,16 +8,17 @@ export default function Translate() {
 
   const startAnimation = () => {
     Animated.timing(animatedValue, {
-      toValue: 150,
+      toValue: -150, // for up or left for y and x .
       duration: 1000,
       useNativeDriver: false,
     }).start(() => {
-      setOpacity(0);
-      Animated.timing(animatedValue, {
-        toValue: 0,
-        duration: 1000,
-        useNativeDriver: false,
-      }).start();
+      // Animated.timing(animatedValue, {
+      //   toValue: 0,
+      //   duration: 1000,
+      //   useNativeDriver: false,
+      // }).start();
+
+      animatedValue.setValue(0); // for directly setting value without animation
     });
   };
 
